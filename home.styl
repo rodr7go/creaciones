@@ -1,0 +1,127 @@
+body
+html
+	height 100%
+	
+.Container
+	width 800px
+	height 800px
+	background linear-gradient(purple,teal,cadetblue)
+	border-radius 50%
+	position relative
+	margin 3em auto
+	border 20px solid
+	overflow hidden
+
+.Moon
+	width 150px
+	height 150px
+	background white
+	border-radius 50%
+	position relative
+	top 50px
+	margin auto
+	-webkit-animation sunshine 6s infinite
+	
+.Floor
+	width 850px
+	height 200px
+	position relative
+	margin 320px auto
+	background linear-gradient(#989898, #848482, #536878 50%)
+	border-radius 0 0 200px 200px
+	
+	&:after
+		content ''
+		width 850px
+		height 200px
+		background #2A3223
+		position absolute
+		margin 90px auto
+		z-index 999
+		left 0
+		border-top 1px solid cyan
+		-webkit-animation move 1s infinite
+
+.Lines
+	width 80px
+	height 2px
+	background #FF005A
+	top 150px
+	position relative
+	display inline-block
+	z-index 99999 !important
+	left 100px
+	-webkit-animation sunshine-lines1 3s infinite
+
+	&.one
+		left 200px
+		
+	&.two
+		left 300px
+	
+	&.three
+		left 400px
+// ul
+// 	width 100%
+
+.Tree
+	width 5px
+	height 20px
+	background black
+	left 50px
+	top -15px
+	position relative
+	list-style none
+	display inline-block
+	margin 0 2.5em
+	
+	&:before
+		content ''
+		width 60px
+		right -25px
+		top -55px
+		height 60px
+		background #E30032
+		position absolute
+		border-radius 50%	
+		
+.Tree:nth-child(1):before
+.Tree:nth-child(7):before
+.Tree:nth-child(4):before
+	background #FFFF00
+
+.Tree:nth-child(2):before
+.Tree:nth-child(6):before
+	background #00B0F6
+
+.Build
+	width 100px
+	height 200px
+	background #122562
+	position absolute
+	left 40px
+	bottom 260px
+
+	ul
+		text-align center
+		padding 0
+		width 90%
+		margin 2em auto
+	
+		li
+			list-style none
+			width 20px
+			height 25px
+			display inline-block
+			background red
+			text-align center
+			width 30%
+			margin 2px
+	
+@-webkit-keyframes sunshine
+	50%
+		box-shadow 0 0 25px 10px orange
+		
+@-webkit-keyframes sunshine-lines1
+	50%
+		box-shadow 0 0 5px 5px pink
